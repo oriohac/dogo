@@ -1,9 +1,11 @@
 class Dogmodel{
-final String message;
+final List message;
+
+  var dogRange = List;
 Dogmodel({
   required this.message 
 });
 factory Dogmodel.fromJson(dynamic json){
-  return Dogmodel(message: ['message']as String);
+  return Dogmodel(message: json['message'] as List<dynamic>);
 }
 }
